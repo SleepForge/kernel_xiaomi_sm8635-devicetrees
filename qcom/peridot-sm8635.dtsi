@@ -494,12 +494,6 @@
 };
 
 &soc {
-	xiaomi_touch {
-		compatible = "xiaomi-touch";
-		status = "ok";
-		touch,name = "xiaomi-touch";
-	};
-
 	xiaomi_wifi_gpio {
 		compatible = "xiaomi,xiaomi-wifi";
 		gpio = <&tlmm 69 0x00>;

@@ -122,6 +122,12 @@
 		&dsi_n16t_42_0a_0c_dsc_vid
 		&dsi_r66451_amoled_video>;
 	};
+	xiaomi-touch  {
+		panel-primary = <&dsi_n16t_42_02_0a_dsc_vid
+		&dsi_n16t_36_0f_0b_dsc_vid
+		&dsi_n16t_42_0a_0c_dsc_vid
+		&dsi_r66451_amoled_video>;
+	};
 };
 &spmi_bus {
 	qcom,pm8350b@3 {
