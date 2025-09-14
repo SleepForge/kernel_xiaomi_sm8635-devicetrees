@@ -54,7 +54,8 @@ CLIFFS_BOARDS += \
 		 cliffs-mtp-peach-overlay.dtbo \
 		 cliffs-rcm-qhdp-overlay.dtbo \
 		 cliffs-rcm-fhdp-kiwi-overlay.dtbo \
-		 cliffs-rcm-qhdp-kiwi-overlay.dtbo
+		 cliffs-rcm-qhdp-kiwi-overlay.dtbo \
+ 		 peridot-sm8635-overlay.dtbo
 
 pineapple-dtb-$(CONFIG_ARCH_CLIFFS) += \
 	$(call add-overlays, $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS),$(CLIFFS_BASE_DTB))\
