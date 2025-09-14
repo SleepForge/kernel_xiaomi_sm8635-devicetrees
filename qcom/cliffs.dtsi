@@ -1717,6 +1717,7 @@
 	adsp_sleepmon: adsp-sleepmon {
 		compatible = "qcom,adsp-sleepmon";
 		qcom,rproc-handle = <&adsp_pas>;
+		qcom,wait_time_lpm = <45>;
 	};
 
 	adsp_pas: remoteproc-adsp@03000000 {
