@@ -4,6 +4,7 @@
 		qcom,ipc-gpio = <&tlmm 21 0>;
 		qcom,finger-detect-gpio = <&tlmm 20 0>;
 		qcom,intr2-gpio = <&tlmm 55 0>;
+		status = "disabled";
 	};
 
 };
