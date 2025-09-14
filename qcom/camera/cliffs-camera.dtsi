@@ -1031,6 +1031,7 @@
 			compatible = "qcom,msm-cam-smmu-cb";
 			iommus = <&apps_smmu 0x800 0x20>;
 			qcom,iommu-dma-addr-pool = <0x0 0x100000 0xf 0xffe00000>;
+			qcom,iommu-faults = "stall-disable", "non-fatal";
 			dma-coherent;
 			cam-smmu-label = "ife", "sfe";
 			multiple-client-devices;
@@ -1055,6 +1056,7 @@
 			iommus = <&apps_smmu 0x18A0 0x0000>;
 			cam-smmu-label = "jpeg";
 			qcom,iommu-dma-addr-pool = <0x0 0x100000 0x0 0xffe00000>;
+			qcom,iommu-faults = "stall-disable", "non-fatal";
 			dma-coherent;
 			jpeg_iova_mem_map: iova-mem-map {
 				/* IO region is approximately 4.0 GB */
@@ -1081,6 +1083,7 @@
 				<&apps_smmu 0x1880 0x00>;
 			cam-smmu-label = "icp";
 			qcom,iommu-dma-addr-pool = <0x0 0xf9500000 0xf 0x06a00000>;
+			qcom,iommu-faults = "stall-disable", "non-fatal";
 			dma-coherent;
 			icp_iova_mem_map: iova-mem-map {
 				iova-mem-region-shared {
@@ -1191,6 +1194,7 @@
 			qcom,iommu-dma-addr-pool = <0x0 0x100000 0x0 0xffe00000>;
 			dma-coherent;
 			multiple-client-devices;
+			qcom,iommu-faults = "stall-disable", "non-fatal";
 			rt_cdm_iova_mem_map: iova-mem-map {
 				iova-mem-region-io {
 					iova-region-name = "io";
