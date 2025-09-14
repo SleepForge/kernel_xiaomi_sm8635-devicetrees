@@ -3103,10 +3103,10 @@
 
 	ramoops_mem: ramoops_region {
 		compatible = "ramoops";
-		alloc-ranges = <0x0 0x00000000 0xffffffff 0xffffffff>;
-		size = <0x0 0x200000>;
+		console-size = <0x200000>;
 		pmsg-size = <0x200000>;
 		mem-type = <2>;
+		reg = <0x0 0xA7000000 0x0 0x400000>;
 	};
 
 	va_md_mem: va_md_mem_region {
