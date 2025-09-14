@@ -12,6 +12,7 @@ add-overlays = $(foreach o,$1,$(foreach b,$2,$(eval $(basename $b)-$(basename $o
 #
 
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
+ifeq ($(CONFIG_MI_HARDWARE_ID),)
 
 PINEAPPLE_BASE_DTB += pineapple-v2.dtb pineapple-qcm.dtb
 PINEAPPLE_APQ_BASE_DTB += pineapplep-v2.dtb pineapplep-sg-v2.dtb pineappleq-v2.dtb pineapplep-qcs.dtb
@@ -54,8 +55,7 @@ CLIFFS_BOARDS += \
 		 cliffs-mtp-peach-overlay.dtbo \
 		 cliffs-rcm-qhdp-overlay.dtbo \
 		 cliffs-rcm-fhdp-kiwi-overlay.dtbo \
-		 cliffs-rcm-qhdp-kiwi-overlay.dtbo \
- 		 peridot-sm8635-overlay.dtbo
+		 cliffs-rcm-qhdp-kiwi-overlay.dtbo
 
 pineapple-dtb-$(CONFIG_ARCH_CLIFFS) += \
 	$(call add-overlays, $(CLIFFS_BOARDS) $(NOAPQ_CLIFFS_BOARDS),$(CLIFFS_BASE_DTB))\
@@ -95,7 +95,15 @@ pineapple-dtb-$(CONFIG_ARCH_VOLCANO) += \
 pineapple-overlays-dtb-$(CONFIG_ARCH_VOLCANO) += $(VOLCANO_BOARDS) $(NOAPQ_VOLCANO_BOARDS) $(VOLCANO_BASE_DTB) $(VOLCANO_APQ_BASE_DTB)
 
 dtb-y += $(pineapple-dtb-y)
+else
+CLIFFS_BASE_DTB += cliffs.dtb cliffs7.dtb
+XIAOMI_CLIFFS_BOARDS += \
+		 peridot-sm8635-overlay.dtbo
 
+peridot-overlays-dtb-$(CONFIG_ARCH_CLIFFS) += $(XIAOMI_CLIFFS_BOARDS) $(CLIFFS_BASE_DTB)
+
+dtb-y += $(peridot-overlays-dtb-y)
+endif
 KALAMA_BASE_DTB += kalama.dtb kalama-v2.dtb
 KALAMA_APQ_BASE_DTB += kalamap.dtb kalamap-v2.dtb
 
