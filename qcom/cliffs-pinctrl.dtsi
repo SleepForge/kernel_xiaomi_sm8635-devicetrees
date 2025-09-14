@@ -1972,6 +1972,33 @@
 		};
 	};
 
+	spkr_1_sd_n {
+		spkr_1_sd_n_active: spkr_1_sd_n_active {
+			config {
+				bias-disable;
+				drive-strength = <0x10>;
+				output-high;
+				pins = "gpio98";
+			};
+			mux {
+				function = "gpio";
+				pins = "gpio98";
+			};
+		};
+		spkr_1_sd_n_sleep: spkr_1_sd_n_sleep {
+			config {
+				bias-pull-down;
+				drive-strength = <0x2>;
+				input-enable;
+				pins = "gpio98";
+			};
+			mux {
+				function = "gpio";
+				pins = "gpio98";
+			};
+		};
+	};
+
 	sdc2_on: sdc2_on {
 		clk {
 			pins = "gpio62";
