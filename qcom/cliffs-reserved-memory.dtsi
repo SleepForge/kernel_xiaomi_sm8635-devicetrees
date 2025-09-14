@@ -112,6 +112,11 @@
 		reg = <0x0 0x86b00000 0x0 0x3700000>;
 	};
 
+	dump_display_mem: dump_display_region@816e0000 {
+		no-map;
+		reg = <0x0 0x816E0000 0x0 0x800>;
+	};
+
 	mpss_mem: mpss_region@8bc00000 {
 		no-map;
 		reg = <0x0 0x8bc00000 0x0 0xcd00000>;
