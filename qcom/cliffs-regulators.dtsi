@@ -833,9 +833,12 @@
 	rpmh-regulator-bobb1 {
 		compatible = "qcom,rpmh-vrm-regulator";
 		qcom,resource-name = "bobb1";
-
+		qcom,mode-threshold-currents = <0 1000000 2000000>;
+		qcom,supported-modes = <0 3 4>;
+		qcom,regulator-type = "pmic5-bob";
 		BOB:
 		pmxr2230_bob: regulator-pmxr2230-bob1 {
+			qcom,init-mode = <0>;
 			regulator-name = "pmxr2230_bob";
 			qcom,set = <RPMH_REGULATOR_SET_ALL>;
 			regulator-min-microvolt = <3008000>;
