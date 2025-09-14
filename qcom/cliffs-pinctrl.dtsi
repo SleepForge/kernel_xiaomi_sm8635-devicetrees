@@ -157,7 +157,6 @@
 				pins = "gpio52";
 				drive-strength = <2>;
 				bias-pull-up;
-				qcom,i2c_pull;
 			};
 		};
 
@@ -171,7 +170,6 @@
 				pins = "gpio53";
 				drive-strength = <2>;
 				bias-pull-up;
-				qcom,i2c_pull;
 			};
 		};
 
