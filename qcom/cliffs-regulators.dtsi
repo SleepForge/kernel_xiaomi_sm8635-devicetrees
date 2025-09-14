@@ -634,6 +634,38 @@
 		};
 	};
 
+	rpmh-regulator-ldob14 {
+		compatible = "qcom,rpmh-vrm-regulator";
+		qcom,mode-threshold-currents = <0 10000>;
+		qcom,regulator-type = "pmic5-ldo";
+		qcom,resource-name = "ldob14";
+		qcom,supported-modes = <2 4>;
+		L14B: pmxr2230_l14: regulator-pmxr2230-l14 {
+			qcom,init-mode = <4>;
+			qcom,init-voltage = <2700000>;
+			qcom,set = <3>;
+			regulator-max-microvolt = <3300000>;
+			regulator-min-microvolt = <2700000>;
+			regulator-name = "pmxr2230_l14";
+		};
+	};
+
+	rpmh-regulator-ldob15 {
+		compatible = "qcom,rpmh-vrm-regulator";
+		qcom,mode-threshold-currents = <0 10000>;
+		qcom,regulator-type = "pmic5-ldo";
+		qcom,resource-name = "ldob15";
+		qcom,supported-modes = <2 4>;
+		L15B: pmxr2230_l15: regulator-pmxr2230-l15 {
+			qcom,init-mode = <4>;
+			qcom,init-voltage = <1504000>;
+			qcom,set = <0x3>;
+			regulator-max-microvolt = <3544000>;
+			regulator-min-microvolt = <1504000>;
+			regulator-name = "pmxr2230_l15";
+		};
+	};
+
 	rpmh-regulator-ldob16 {
 		compatible = "qcom,rpmh-vrm-regulator";
 		qcom,resource-name = "ldob16";
