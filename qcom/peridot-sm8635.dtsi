@@ -237,6 +237,9 @@
 		goodix,firmware-name-second = "goodix_firmware_peridot_csot_second.bin";
 		goodix,config-name-second = "goodix_cfg_group_peridot_csot_second.bin";
 
+		goodix,ts-id1-gpio = <&tlmm 31 GPIO_ACTIVE_LOW>;
+		goodix,ts-id2-gpio = <&tlmm 46 GPIO_ACTIVE_LOW>;
+
 		/* parameters for 2nd supplier focaltech */
 		focaltech,avdd-name = "avdd";
 		focaltech,iovdd-name = "vdd";
@@ -255,6 +258,9 @@
 		focaltech,fod-ly = <2332>;
 		focaltech,fod-x-size = <210>;
 		focaltech,fod-y-size = <210>;
+
+		focaltech,ts-id1-gpio = <&tlmm 31 GPIO_ACTIVE_LOW>;
+		focaltech,ts-id2-gpio = <&tlmm 46 GPIO_ACTIVE_LOW>;
 
 		/* parameters for xiaomi_touch */
 		mi_tp,game-mode-array =
