@@ -61,7 +61,7 @@
 		mi,mdss-dsi-panel-flatmode-status-read-length = <1>;
 		mi,mdss-dsi-panel-flatmode-on-status-value = <0x01>;
 
-		qcom,dsi-supported-dfps-list = <60 120 90 30>;
+		qcom,dsi-supported-dfps-list = <60 120 90>;
 		qcom,mdss-dsi-display-timings {
 			timing@0{
 				qcom,mdss-dsi-video-mode;
