@@ -444,14 +444,14 @@
             qcom,effect-id = <4>;
             qcom,wf-brake-pattern = <02 01 00 00>;
             qcom,wf-pattern = [3E 3E];
-            qcom,wf-play-rate-us = <28000>;
+            qcom,wf-play-rate-us = <22500>;
             qcom,wf-vmax-mv = <3600>;
         };
         wf_5 {
             qcom,effect-id = <5>;
             qcom,wf-brake-pattern = <03 03 01 00>;
             qcom,wf-pattern = [7E 7E 7E];
-            qcom,wf-play-rate-us = <20000>;
+            qcom,wf-play-rate-us = <15000>;
             qcom,wf-vmax-mv = <3600>;
         };
         wf_6 {
